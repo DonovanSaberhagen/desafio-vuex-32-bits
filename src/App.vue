@@ -19,7 +19,7 @@
           <td>{{ juego.stock }}</td>
           <td>${{ juego.precio }}</td>
           <td>
-          <!--Los métodos decrementStock e incrementStock son llamados con el index del juego actual. Esto asegura que cuando se hace clic en los botones, la acción sabe exactamente qué juego debe actualizarse.-->
+          
             <button @click="decrementStock(index)" :disabled="juego.stock <= 0">-</button>
             <button @click="incrementStock(index)">+</button>
           </td>
@@ -51,14 +51,14 @@ export default {
 }
 
 table {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   border-collapse: collapse;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 2px solid #ddd;
+  padding: 10px;
 }
 
 th {
@@ -85,5 +85,13 @@ button:hover{
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+h1 {
+  color: #10518a;
+}
+
+h2 {
+  color: #3d98e8;
 }
 </style>

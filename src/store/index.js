@@ -6,7 +6,7 @@ export default createStore({
     juegos: juegos
   },
 
-  //incrementStock(state, index) y decrementStock(state, index): Las mutaciones en Vuex reciben el estado actual (state) y el índice del juego a modificar. Esto permite a las mutaciones actualizar el stock del juego correcto en la lista juegos.
+  // Mutaciones
   mutations: {
     incrementStock(state, index) {
       state.juegos[index].stock++;
@@ -18,7 +18,7 @@ export default createStore({
     },
   },
 
-  //incrementStock(context, index) y decrementStock(context, index): Las acciones también reciben el contexto de Vuex (context) y el índice del juego a modificar. Las acciones luego comiten las mutaciones correspondientes, pasando el índice recibido.
+  // Acciones
   actions: {
     incrementStock(context, index) {
       context.commit("incrementStock", index);
@@ -30,4 +30,3 @@ export default createStore({
 });
 
 
-//El uso de index asegura que cada operación de incremento y decremento del stock se aplique al juego correcto en la lista.
